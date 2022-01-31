@@ -1,0 +1,26 @@
+.App{
+    display: grid;
+    place-items: center;
+    background-color: #1B4266;
+    height: 100vh;
+  
+    width: 100%;
+    
+   
+    background-attachment: fixed;
+    
+}
+
+.app_body{
+    display: flex;
+    border-radius: 30px;
+    border: 1px solid #1B4266;
+    background-color: #041c31;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 10px;
+    width: 137vh;
+    height: 95vh;
+    
+    
+
+}

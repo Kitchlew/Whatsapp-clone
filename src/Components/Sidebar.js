@@ -3,7 +3,7 @@ import { Avatar, IconButton } from "@material-ui/core";
 // import DonutLargeIcon from '@mui/icons-material/DonutLarge';
 // import ChatIcon from '@mui/icons-material/Chat';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
-import './Sidebar.css'
+import './assets/css/Sidebar.css'
 import { FiMoreVertical } from "react-icons/fi";
 import { MdDonutLarge } from "react-icons/md";
 import { BsFillChatFill } from "react-icons/bs";
@@ -16,7 +16,7 @@ export default function Sidebar() {
   const [rooms, setRooms] = useState([]);
   console.log(rooms)
 
-  useEffect(() => {
+  /*useEffect(() => {
     db.collection('rooms').onSnapshot(snapshot => (
       setRooms(snapshot.docs.map(doc => (
         {
@@ -26,7 +26,7 @@ export default function Sidebar() {
       )
       ))
     ))
-  }, [])
+  }, [])*/
 
 
   return (

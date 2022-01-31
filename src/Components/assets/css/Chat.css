@@ -2,13 +2,15 @@
     display:flex;
     flex:0.65;
     flex-direction: column;
+    
+    
     /* background-color: white; */
 }
 .chat__header{
     padding: 20px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid #1B4266;
 }
 
 .chat__headerInfo{
@@ -33,9 +35,12 @@
 
 .chat__body{
     flex:1;
-    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    background-image: url("../../assets/images/Backgroud_texture.PNG");
+    z-index: 100;
     background-repeat: repeat;
     background-position: center;
+    aspect-ratio: initial;
+    background-color: transparent;
     padding: 30px;
     overflow: scroll;
 }
@@ -46,12 +51,13 @@
     padding: 10px;
     border-radius: 10px;
     width: fit-content;
-    background-color: #ffffff;
+    background-color: #1B4266;
+    
     margin-bottom: 30px;
 }
 .chat__recevier{
     margin-left: auto;
-    background-color: #dcf8c6;
+    background-color: #FADC0F;
 }
 .chat__name{
     position: absolute;
@@ -68,9 +74,12 @@
     justify-content: space-between;
     align-items: center;
     height: 62px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-top: 1px solid lightgrey;
+    
+    margin-right: 25px;
+    border-left: 1px solid #1B4266;
+    border-top: 1px solid #1B4266;border-bottom: 1px solid #1B4266;
+    background-color: #041c31;
+    
 }
 
 .chat__footer > form{
@@ -78,6 +87,7 @@
     display: flex;
     margin-left: 10px;
     margin-right: 10px;
+    
 }
 
 .chat__footer>form>input{
@@ -85,8 +95,10 @@
     border-radius: 30px;
     padding: 10px;
     border: none;
+    color: #1B4266;
 }
 /* this will keep the functionality of the button but will not display it */
 .chat__footer>form>button{
     display:none; 
+    color: #1B4266;
 }

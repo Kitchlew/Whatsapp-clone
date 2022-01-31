@@ -3,7 +3,7 @@
 // import { initializeApp } from "firebase/app";
 // // import { auth } from 'https://www.gstatic.com/firebasejs/9.6.5/firebase-auth.js'
 // import { firestore } from 'https://www.gstatic.com/firebasejs/9.6.5/firebase-firestore.js'
-import firebase from 'firebase';
+//import firebase from 'firebase';
 // import 'firebase/auth';
 
 
@@ -22,5 +22,5 @@ import firebase from 'firebase';
 // const auth = firebase.auth();
 // const provider = new firebase.auth.GoogleAuthProvider();
 
-export { auth, provider };
-export default Db;
+//export { auth, provider };
+//export default Db;

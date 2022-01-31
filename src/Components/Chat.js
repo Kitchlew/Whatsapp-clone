@@ -6,9 +6,9 @@ import { FiMoreVertical } from "react-icons/fi";
 import { BsEmojiLaughing } from "react-icons/bs";
 import { BsFillMicFill } from "react-icons/bs";
 
+import baground from "./assets/images/Backgroud_texture.PNG"
 
-
-import "./Chat.css";
+import "./assets/css/Chat.css";
 
 function Chat() {
     const [input, setInput] = useState('')
@@ -45,6 +45,7 @@ function Chat() {
                 </div>
             </div>
             <div className='chat__body'>
+                
                 <p className={`chat__message ${true && 'chat__recevier'}`}>
                     <span className='chat__name'>Haziq</span>
                     Hey guys
