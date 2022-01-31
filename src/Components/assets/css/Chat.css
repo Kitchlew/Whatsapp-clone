@@ -79,7 +79,7 @@
     border-left: 1px solid #1B4266;
     border-top: 1px solid #1B4266;border-bottom: 1px solid #1B4266;
     background-color: #041c31;
-    
+    color: #1B4266;
 }
 
 .chat__footer > form{
@@ -95,10 +95,12 @@
     border-radius: 30px;
     padding: 10px;
     border: none;
-    color: #1B4266;
 }
 /* this will keep the functionality of the button but will not display it */
 .chat__footer>form>button{
     display:none; 
-    color: #1B4266;
+}
+.navi:hover  icon {
+    transform: translateY(-50px);
+
 }

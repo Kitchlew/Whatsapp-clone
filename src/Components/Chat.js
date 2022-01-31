@@ -5,6 +5,7 @@ import { MdAttachFile } from "react-icons/md";
 import { FiMoreVertical } from "react-icons/fi";
 import { BsEmojiLaughing } from "react-icons/bs";
 import { BsFillMicFill } from "react-icons/bs";
+import{AiOutlinePlus} from "react-icons/ai";
 
 import baground from "./assets/images/Backgroud_texture.PNG"
 
@@ -28,19 +29,19 @@ function Chat() {
         <div className='chat'>
             <div className='chat__header'>
                 <Avatar src={`https://robohash.org/${seed}.png`} />
-                <div className='chat__headerInfo'>
+                <div className='chat__headerInfo'style={{color:"#a8b3bd"}}>
                     <h3>Room name</h3>
                     <p>Last seen at...</p>
                 </div>
                 <div className='chat__headerRight'>
                     <IconButton>
-                        <BiSearchAlt2 />
+                        <BiSearchAlt2 style={{color:"#a8b3bd"}}/>
                     </IconButton>
                     <IconButton>
-                        <MdAttachFile />
+                        <MdAttachFile style={{color:"#a8b3bd"}}/>
                     </IconButton>
                     <IconButton>
-                        <FiMoreVertical />
+                        <FiMoreVertical style={{color:"#a8b3bd"}}/>
                     </IconButton>
                 </div>
             </div>
@@ -54,8 +55,14 @@ function Chat() {
             </div>
             <div className='chat__footer'>
                 <IconButton>
-                    <BsEmojiLaughing />
+                    <BsEmojiLaughing style={{color:"#a8b3bd"}}/>
                 </IconButton>
+                <span className='navi'>
+                <IconButton className="parent">
+                    <AiOutlinePlus className="icon" style={{color:"#a8b3bd"}}/>
+                </IconButton>
+
+                </span>
                 <form>
                     <input value={input} onChange={(e) =>
                         setInput(e.target.value)
@@ -65,7 +72,7 @@ function Chat() {
                     <button onClick={sendMessage} type='submit'>Send a message</button>
                 </form>
                 <IconButton>
-                    <BsFillMicFill />
+                    <BsFillMicFill style={{color:"#a8b3bd"}}/>
                 </IconButton>
             </div>
         </div>

@@ -35,13 +35,13 @@ export default function Sidebar() {
         <Avatar />
         <div className='sidebar__headerRight'>
           <IconButton>
-            <MdDonutLarge />
+            <MdDonutLarge style={{color:"#a8b3bd"}}/>
           </IconButton>
           <IconButton>
-            <BsFillChatFill />
+            <BsFillChatFill style={{color:"#a8b3bd"}} />
           </IconButton>
           <IconButton>
-            <FiMoreVertical />
+            <FiMoreVertical style={{color:"#a8b3bd"}} />
           </IconButton>
         </div>
       </div>
