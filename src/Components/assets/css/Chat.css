@@ -96,7 +96,3 @@
 .chat__footer>form>button{
     display:none; 
 }
-.navi:hover  icon {
-    transform: translateY(-50px);
-
-}

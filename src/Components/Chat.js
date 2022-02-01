@@ -8,7 +8,7 @@ import { BsFillMicFill } from "react-icons/bs";
 import{AiOutlinePlus} from "react-icons/ai";
 
 
-
+import { BiSend } from 'react-icons/bi';
 import "./assets/css/Chat.css";
 
 function Chat() {
@@ -44,25 +44,29 @@ function Chat() {
                 </p>
             </div>
             <div className='chat__footer'>
-                <IconButton>
-                    <BsEmojiLaughing style={{color:"#a8b3bd"}}/>
-                </IconButton>
+                
                 <span className='navi'>
                 <IconButton className="parent">
                     <AiOutlinePlus className="icon" style={{color:"#a8b3bd"}}/>
                 </IconButton>
 
                 </span>
+                <IconButton>
+                    <BsEmojiLaughing style={{color:"#a8b3bd"}}/>
+                </IconButton>
+                <IconButton>
+                    <BsFillMicFill style={{color:"#a8b3bd"}}/>
+                </IconButton>
                 <form>
                     <input value={input} onChange={(e) =>
                         setInput(e.target.value)
                     }
                         placeholder='Type a message'
-                        type='text' />
+                        type='text' ></input>
                     <button onClick={sendMessage} type='submit'>Send a message</button>
                 </form>
                 <IconButton>
-                    <BsFillMicFill style={{color:"#a8b3bd"}}/>
+                    <BiSend style={{color:"#a8b3bd"}}/>
                 </IconButton>
             </div>
         </div>
