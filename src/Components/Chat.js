@@ -7,7 +7,7 @@ import { BsEmojiLaughing } from "react-icons/bs";
 import { BsFillMicFill } from "react-icons/bs";
 import{AiOutlinePlus} from "react-icons/ai";
 
-import baground from "./assets/images/Backgroud_texture.PNG"
+
 
 import "./assets/css/Chat.css";
 
@@ -31,19 +31,9 @@ function Chat() {
                 <Avatar src={`https://robohash.org/${seed}.png`} />
                 <div className='chat__headerInfo'style={{color:"#a8b3bd"}}>
                     <h3>Room name</h3>
-                    <p>Last seen at...</p>
+                   
                 </div>
-                <div className='chat__headerRight'>
-                    <IconButton>
-                        <BiSearchAlt2 style={{color:"#a8b3bd"}}/>
-                    </IconButton>
-                    <IconButton>
-                        <MdAttachFile style={{color:"#a8b3bd"}}/>
-                    </IconButton>
-                    <IconButton>
-                        <FiMoreVertical style={{color:"#a8b3bd"}}/>
-                    </IconButton>
-                </div>
+               
             </div>
             <div className='chat__body'>
                 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef,useEffect, useState } from 'react';
 import { Avatar, IconButton } from "@material-ui/core";
 // import DonutLargeIcon from '@mui/icons-material/DonutLarge';
 // import ChatIcon from '@mui/icons-material/Chat';
@@ -8,13 +8,36 @@ import { FiMoreVertical } from "react-icons/fi";
 import { MdDonutLarge } from "react-icons/md";
 import { BsFillChatFill } from "react-icons/bs";
 import { BiSearch } from "react-icons/bi";
+import { BsDownload } from 'react-icons/bs';
 import SidebarChat from './SidebarChat';
-import db from '../firebases'
+import { BiScan } from 'react-icons/bi';
+import db from '../firebases';
+import './assets/fonts/ionicons.min.css'
+import { BsWallet2 } from 'react-icons/bs';
 
-
+import avatar from "./assets/images/Avatar.jpeg";
 export default function Sidebar() {
+  const address="0xD3998D9993B3310C8F739694C97103A5770dbB2E"
+  function PublicAddress(event){
+    const text= address.substring(0,6)+". . ."
+    console.log(text)
+    return(<>{text}</>)
+    }
   const [rooms, setRooms] = useState([]);
   console.log(rooms)
+  const [copySuccess, setCopySuccess] = useState('');
+  const textAreaRef = useRef(null);
+
+  function copyToClipboard(e) {
+    textAreaRef.current.select();
+    document.execCommand('copy');
+    // This is just personal preference.
+    // I prefer to not show the whole text area selected.
+    e.target.focus();
+    setCopySuccess('Copied!');
+  
+    alert(copySuccess);
+  };
 
   /*useEffect(() => {
     db.collection('rooms').onSnapshot(snapshot => (
@@ -31,23 +54,60 @@ export default function Sidebar() {
 
   return (
     <div className='sidebar'>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
       <div className='sidebar__header'>
-        <Avatar />
-        <div className='sidebar__headerRight'>
-          <IconButton>
-            <MdDonutLarge style={{color:"#a8b3bd"}}/>
-          </IconButton>
-          <IconButton>
-            <BsFillChatFill style={{color:"#a8b3bd"}} />
-          </IconButton>
-          <IconButton>
-            <FiMoreVertical style={{color:"#a8b3bd"}} />
-          </IconButton>
+      <div className="row g-0" style={{textAlign: "center",paddingLeft: "95px",paddingTop:'30px'}}>
+      <img className="rounded-circle " src={avatar} style={{ gridRowStart:"2", width: "90px",
+    height: "90px",
+    borderRadius: "50%",
+    overflow: "hidden",
+    borderWidth: "3",cursor:"pointer"}}/></div>
+  <div>
+      {
+       /* Logical shortcut for only displaying the 
+          button if the copy command exists */
+       document.queryCommandSupported('copy') &&
+        <div>
+          
+          {copySuccess}
         </div>
+      }
+      <div className="row g-0" style={{textAlign: "center",paddingLeft: "91px",paddingTop:'30px'}}>
+        <div className='pub'
+          
+         
+          style={{overflow:"hidden",width:"100px",color:"white",fontSize:'14px'}}
+        ><PublicAddress/></div></div>
+      
+    </div>
+    <span style={{display: "grid",
+    textAlign:"center",
+    justifyContent: "space-between"
+    ,paddingTop:"20px",marginRight:"-30%",padding:"auto",marginLeft:"8%"}}>
+    <div style={{paddingLeft: "10px",gridColumn:"1",boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", backgroundColor:"#1B4266",color:"white",borderColor:"black",height: "50px",
+  width: "40px",
+  
+  borderRadius: "50%"
+  }}>
+    <BsWallet2  size={20}  style={{paddingRight:"6px",paddingTop:"14px"}}/><div style={{paddingTop:"20px",marginLeft:"-3px",fontSize:"13px"}}>Wallet</div></div>
+    <div style={{paddingLeft: "10px",gridColumn:"2",boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", backgroundColor:"#1B4266",color:"white",borderColor:"black",height: "50px",
+  width: "40px",
+  
+  borderRadius: "50%"
+  }}>
+    <BsDownload size={20}  style={{paddingRight:"6px",paddingTop:"14px"}}/><div style={{paddingTop:"20px",marginLeft:"-9px",fontSize:"13px"}}>Receive</div></div>
+    <div style={{paddingLeft: "10px",gridColumn:"3",boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", backgroundColor:"#1B4266",color:"white",borderColor:"black",height: "50px",
+  width: "40px",
+  
+  borderRadius: "50%"
+  }}>
+    <BiScan size={20}  style={{paddingRight:"6px",paddingTop:"14px"}}/><div style={{paddingTop:"20px",marginLeft:"-3px",fontSize:"13px"}}>QR</div></div></span>
       </div>
       <div className='sidebar__search'>
         <div className='sidebar__searchContainer'>
-          <BiSearch size={20} />
+          <BiSearch size={20} style={{paddingLeft: "10px"}} />
           <input placeholder='Search or start new chat' type='text' />
         </div>
       </div>
@@ -58,7 +118,7 @@ export default function Sidebar() {
           name={rooms.data.name}/>
         ))}
       </div>
-
+      
     </div>);
 }
 
