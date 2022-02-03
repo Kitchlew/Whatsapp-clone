@@ -18,8 +18,8 @@ export default function Settings() {
       <img className="rounded-circle " src={avatar} style={{ width: "150px",
     height: "150px",
     borderRadius: "50%"}}/></div>
-    <div className="Pub_Container">
-    <div className='pub'>
+    <div className="Pub_Container" >
+    <div className='pub'style={{width:'400px'}}>
      {address}
     
     </div>

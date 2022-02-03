@@ -36,7 +36,7 @@ color:"white"}}>
    <div className='Send_Container' style={{ 
   borderRadius:  "10px",alignItems:"center" ,background:`url(${baground}) left / cover repeat-y`,backgroundSize:"2000px 400px"}}>
       
-  <div style={{fontSize:"40px",fontWeight:"bolder",color:"rgb(252, 172, 0)",textShadow: "-2px 2px 0 #000"}}>NFTs</div>
+  <div style={{fontSize:"40px",fontWeight:"bolder",color:"limegreen",textShadow: "-2px 2px 0 #000"}}>NFTs</div>
   
   </div>
    

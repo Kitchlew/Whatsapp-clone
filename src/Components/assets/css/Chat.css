@@ -33,7 +33,7 @@
 .chat__body{
     flex:1;
     background-image: url("../../assets/images/Backgroud_texture.PNG");
-    z-index: 100;
+    z-index: 0;
     background-repeat: no-repeat;
     background-size: cover ;
     background-position: center;
@@ -72,6 +72,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
     height: 62px;
     min-width: 160px;
     border-left: 1px solid #1B4266;
@@ -101,7 +102,34 @@
     display:none; 
    
 }
-.navi:hover   {
-    transform: translateY(-50px);
+.icon{
+    position:relative;
+    display:block;
+    line-height:75px;
+    font-size: 1.6em;
+    text-align: center;
+    transition: 0.5s;
+    color:#a8b3bd;
+    cursor: pointer;
+
+}
+.icon:hover{
+    filter: brightness(.5);
+}
+
+
+
+.list{display: flex;
+    background:#FADC0F;
+    width: 70px;
+    height: 70px;
+    align-items: center;
+    margin-top: -150px;
+margin-left: -80px;
+border-radius: 50%;
+
+
+
+
 
 }
