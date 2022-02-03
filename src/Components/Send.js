@@ -12,9 +12,7 @@ export default function Send() {
       }
     return(
 
-<div className="Send"><div style={{display:"flex",flex:"0.1",color:"white",fontSize:"34px",fontWeight:"bold",paddingLeft:"10%",boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", paddingTop:"50px",backgroundColor:"#041c31",border:"2px solid #1B4266"}}>TRANSACTION CHANNEL
-
-</div>
+<div className="Send">
 
 <div className="Pub_Container" style={{paddingTop:"50px"}}>
   <div className='Send_Container' style={{ backgroundColor:"rgb(253, 191, 253)",borderRadius:  "10px",
