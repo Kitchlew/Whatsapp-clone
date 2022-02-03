@@ -27,6 +27,14 @@ export default function Sidebar() {
   console.log(rooms)
   const [copySuccess, setCopySuccess] = useState('');
   const textAreaRef = useRef(null);
+  const Settings=(props)=>{
+    return(
+      <div className='settings-backdrop'>
+       
+        
+      </div>
+    )
+  }
 
   function copyToClipboard(e) {
     textAreaRef.current.select();
@@ -54,9 +62,7 @@ export default function Sidebar() {
 
   return (
     <div className='sidebar'>
-      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+     
       <div className='sidebar__header'>
       <div className="row g-0" style={{textAlign: "center",paddingLeft: "95px",paddingTop:'30px'}}>
       <img className="rounded-circle " src={avatar} style={{ gridRowStart:"2", width: "90px",
@@ -64,16 +70,8 @@ export default function Sidebar() {
     borderRadius: "50%",
     overflow: "hidden",
     borderWidth: "3",cursor:"pointer"}}/></div>
-  <div>
-      {
-       /* Logical shortcut for only displaying the 
-          button if the copy command exists */
-       document.queryCommandSupported('copy') &&
-        <div>
-          
-          {copySuccess}
-        </div>
-      }
+  
+    
       <div className="row g-0" style={{textAlign: "center",paddingLeft: "91px",paddingTop:'30px'}}>
         <div className='pub'
           
@@ -81,7 +79,7 @@ export default function Sidebar() {
           style={{overflow:"hidden",width:"100px",color:"white",fontSize:'14px'}}
         ><PublicAddress/></div></div>
       
-    </div>
+    <Settings>Hello</Settings>
     <span style={{display: "grid",
     textAlign:"center",
     justifyContent: "space-between"
@@ -91,19 +89,19 @@ export default function Sidebar() {
   
   borderRadius: "50%"
   }}>
-    <BsWallet2  size={20}  style={{paddingRight:"6px",paddingTop:"14px"}}/><div style={{paddingTop:"20px",marginLeft:"-3px",fontSize:"13px"}}>Wallet</div></div>
+    <BsWallet2  size={20}  style={{paddingRight:"7px",paddingTop:"14px"}}/><div style={{paddingTop:"20px",marginLeft:"-3px",fontSize:"13px"}}>Wallet</div></div>
     <div style={{paddingLeft: "10px",gridColumn:"2",boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", backgroundColor:"#1B4266",color:"white",borderColor:"black",height: "50px",
   width: "40px",
   
   borderRadius: "50%"
   }}>
-    <BsDownload size={20}  style={{paddingRight:"6px",paddingTop:"14px"}}/><div style={{paddingTop:"20px",marginLeft:"-9px",fontSize:"13px"}}>Receive</div></div>
+    <BsDownload size={20}  style={{paddingRight:"7px",paddingTop:"14px"}}/><div style={{paddingTop:"20px",marginLeft:"-9px",fontSize:"13px"}}>Receive</div></div>
     <div style={{paddingLeft: "10px",gridColumn:"3",boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", backgroundColor:"#1B4266",color:"white",borderColor:"black",height: "50px",
   width: "40px",
   
   borderRadius: "50%"
   }}>
-    <BiScan size={20}  style={{paddingRight:"6px",paddingTop:"14px"}}/><div style={{paddingTop:"20px",marginLeft:"-3px",fontSize:"13px"}}>QR</div></div></span>
+    <BiScan size={20}  style={{paddingRight:"9px",paddingTop:"15px"}}/><div style={{paddingTop:"18px",marginLeft:"-4px",fontSize:"13px"}}>QR</div></div></span>
       </div>
       <div className='sidebar__search'>
         <div className='sidebar__searchContainer'>

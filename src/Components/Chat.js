@@ -51,12 +51,7 @@ function Chat() {
                 </IconButton>
 
                 </span>
-                <IconButton>
-                    <BsEmojiLaughing style={{color:"#a8b3bd"}}/>
-                </IconButton>
-                <IconButton>
-                    <BsFillMicFill style={{color:"#a8b3bd"}}/>
-                </IconButton>
+                
                 <form>
                     <input value={input} onChange={(e) =>
                         setInput(e.target.value)

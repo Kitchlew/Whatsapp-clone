@@ -1,0 +1,29 @@
+.Send{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    
+
+    
+    border: 1px solid #041c31;
+    background-color: #2b70b1;
+    color: rgb(252, 172, 0);
+    margin:0px;
+    width: 100%;
+    height: 230vh;
+}
+.Send_Container{
+    display: flex;
+    color:white;
+    text-align: center;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-top: 40px;  padding-bottom: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 14px;
+    background-color: #1B4266;
+    width: 80%;
+    height: 80px;
+    border-bottom: 1px solid #041c31;
+   
+}
